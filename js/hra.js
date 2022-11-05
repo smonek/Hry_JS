@@ -30,7 +30,7 @@ function cellClicked(){
         return;
     }
     updateCell(this, cellIndex);
-    checkWinner();
+    Winner();
 }
 
 function updateCell(cell, index){
@@ -43,7 +43,7 @@ function changePlayer(){
     statusText.textContent = `${currentPlayer}'s turn`;
 }
 
-function checkWinner(){
+function Winner(){
     let roundWon = false;
     for(let i = 0; i < winConditions.length; i++){
         const condition = winConditions[i];
